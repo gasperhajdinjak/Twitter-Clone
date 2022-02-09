@@ -26,8 +26,8 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 import { useRecoilState } from 'recoil';
-import { modalState, postIdState } from '../../atoms/modalAtom';
-import { db } from '../../firebase';
+import { modalState, postIdState } from '../atoms/modalAtom';
+import { db } from '../firebase';
 // import { async } from '@firebase/util';
 
 function Post({ id, post, postPage }) {

@@ -11,7 +11,7 @@ import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import { useSession } from 'next-auth/react';
 
-import { db, storage } from '../../firebase';
+import { db, storage } from '../firebase';
 import {
   addDoc,
   collection,
