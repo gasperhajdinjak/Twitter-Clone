@@ -49,7 +49,6 @@ export async function getServerSideProps(context) {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(context),
   }).then(res => res.json());
   const providers = await getProviders();
   const session = await getSession(context);
