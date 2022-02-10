@@ -25,6 +25,7 @@ function Trending({ result }) {
           src={result.img}
           width={70}
           height={70}
+          alt=''
           objectFit='cover'
           className='rounded-2xl'
         />

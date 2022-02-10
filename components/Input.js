@@ -86,6 +86,7 @@ function Input() {
     >
       <img
         src={session.user.image}
+        alt=''
         className='h-11 w-11 rounded-full cursor-pointer'
       />
       <div className='w-full divide-y divide-gray-700'>
@@ -108,6 +109,7 @@ function Input() {
               </div>
               <img
                 src={selectedFile}
+                alt=''
                 className='rounded-2xl max-h-80 object-contain'
               />
             </div>
