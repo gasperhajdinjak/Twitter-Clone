@@ -44,12 +44,9 @@ export async function getServerSideProps(context) {
     },
     body: JSON.stringify(context),
   }).then(res => res.json());
-  const followResults = await fetch('https://jsonkeeper.com/b/WWMJ', {
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  }).then(res => res.json());
+  const followResults = await fetch('https://jsonkeeper.com/b/WWMJ').then(res =>
+    res.json()
+  );
   const providers = await getProviders();
   const session = await getSession(context);
 
