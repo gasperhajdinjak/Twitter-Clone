@@ -38,12 +38,18 @@ export default function Home({ trendingResults, followResults, providers }) {
 }
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch(" https://jsonkeeper.com/b/4H7N").then(
-    res => res.json()
-  );
-  const followResults = await fetch("https://jsonkeeper.com/b/YUD0").then(res =>
-    res.json()
-  );
+  const trendingResults = await fetch(" https://jsonkeeper.com/b/4H7N", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(res => res.json());
+  const followResults = await fetch("https://jsonkeeper.com/b/YUD0", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(res => res.json());
   const providers = await getProviders();
   const session = await getSession(context);
 
