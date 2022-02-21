@@ -38,7 +38,7 @@ export default function Home({ trendingResults, followResults, providers }) {
 }
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch(" https://jsonkeeper.com/b/4H7N", {
+  const trendingResults = await fetch("https://jsonkeeper.com/b/4H7N", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
